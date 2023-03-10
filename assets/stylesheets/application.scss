@@ -2,6 +2,9 @@ body {
   color: white;
   background-color: black;
 }
+h1 {
+  text-align: center;
+}
 
 .app {
   margin-top: 20px;
@@ -20,6 +23,17 @@ body {
     h3 {
       margin-top: 0;
     }
+    img {
+      width: 100%;
+    }
+    h4 {
+      text-align: center;
+      margin-top: 50vh;
+      color: #E60F05;
+    }
+  }
+  li:hover {
+    color: #E60F05;
   }
 }
 

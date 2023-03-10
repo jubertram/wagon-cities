@@ -15,7 +15,9 @@ class ActiveCity extends PureComponent {
       );
     }
     return (
-      <div />
+      <div className="active-city">
+        <h4>Click on a city to show details</h4>
+      </div>
     );
   }
 }
