@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import setCities from '../actions/index';
+import { setCities } from '../actions';
 
 import City from './city';
 
@@ -21,6 +21,11 @@ class CityList extends PureComponent {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    cities: state.cities
+  };
+}
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     { setCities },
@@ -28,9 +33,4 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps(state) {
-  return {
-    cities: state.cities
-  };
-}
 export default connect(mapStateToProps, mapDispatchToProps)(CityList);
